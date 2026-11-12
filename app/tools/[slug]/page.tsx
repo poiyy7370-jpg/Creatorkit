@@ -6,10 +6,19 @@ import WordCounter from "@/components/tools/WordCounter";
 import CharacterCounter from "@/components/tools/CharacterCounter";
 import HashtagGenerator from "@/components/tools/HashtagGenerator";
 import TitleGenerator from "@/components/tools/TitleGenerator";
+import DescriptionGenerator from "@/components/tools/DescriptionGenerator";
+import BioGenerator from "@/components/tools/BioGenerator";
+import ImageCompressor from "@/components/tools/ImageCompressor";
+import ImageResizer from "@/components/tools/ImageResizer";
+import QrGenerator from "@/components/tools/QrGenerator";
+import ThumbnailResizer from "@/components/tools/ThumbnailResizer";
 
 const map: Record<string, () => JSX.Element> = {
   "word-counter": WordCounter, "character-counter": CharacterCounter,
   "hashtag-generator": HashtagGenerator, "youtube-title-generator": TitleGenerator,
+  "youtube-description-generator": DescriptionGenerator, "instagram-bio-generator": BioGenerator,
+  "image-compressor": ImageCompressor, "image-resizer": ImageResizer,
+  "qr-code-generator": QrGenerator, "youtube-thumbnail-resizer": ThumbnailResizer,
 };
 export const dynamicParams = false;
 export const generateStaticParams = () => tools.map(t => ({ slug: t.slug }));
