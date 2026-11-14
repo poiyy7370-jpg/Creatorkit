@@ -31,13 +31,20 @@ export default function ContactPage() {
             Contact CreatorKit
           </h2>
 
-          <p className="leading-8 text-slate-300">
-            We are working on setting up our official support
-            contact. Our contact details will be published here soon.
+          <p className="mb-4 leading-8 text-slate-300">
+            For questions, feedback, technical support or business
+            inquiries, contact us through our official email:
           </p>
 
-          <p className="mt-5 text-sm text-amber-400">
-            Thank you for your patience and support!
+          <a
+            href="mailto:creatorkit.support@gmail.com"
+            className="break-all font-semibold text-amber-400 hover:text-amber-300"
+          >
+            creatorkit.support@gmail.com
+          </a>
+
+          <p className="mt-5 text-sm text-slate-400">
+            We will do our best to respond to your message.
           </p>
         </section>
 
