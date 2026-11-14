@@ -12,11 +12,20 @@ export const metadata: Metadata = {
     template: `%s | ${site.name}`,
   },
   description:
-    "Free browser-based tools for YouTubers, Instagram users, TikTok creators and bloggers. No sign-up.",
-  openGraph: { siteName: site.name, type: "website" },
+    "Free browser-based tools for YouTubers, Instagram users, TikTok creators and bloggers. No sign-up required.",
+  openGraph: {
+    siteName: site.name,
+    title: `${site.name} – ${site.tagline}`,
+    description:
+      "Free browser-based tools for content creators and digital marketers.",
+    type: "website",
+  },
 };
 
-const nav = [["Home", "/"], ["All Tools", "/tools"]];
+const nav = [
+  ["Home", "/"],
+  ["All Tools", "/tools"],
+] as const;
 
 export default function RootLayout({
   children,
@@ -90,6 +99,7 @@ export default function RootLayout({
                     height={100}
                     className="h-12 w-12 object-contain"
                   />
+
                   <div>
                     <h2 className="text-lg font-extrabold text-amber-400">
                       CreatorKit
@@ -108,14 +118,29 @@ export default function RootLayout({
 
               <div className="sm:text-right">
                 <h3 className="font-bold text-white">Quick Links</h3>
-                <div className="mt-4 flex gap-5 text-sm text-slate-400 sm:justify-end">
+
+                <div className="mt-4 flex flex-wrap gap-5 text-sm text-slate-400 sm:justify-end">
                   <Link href="/" className="hover:text-amber-400">
                     Home
                   </Link>
+
                   <Link href="/tools" className="hover:text-amber-400">
                     All Tools
                   </Link>
+
+                  <Link href="/about" className="hover:text-amber-400">
+                    About Us
+                  </Link>
+
+                  <Link href="/contact" className="hover:text-amber-400">
+                    Contact Us
+                  </Link>
+
+                  <Link href="/privacy-policy" className="hover:text-amber-400">
+                    Privacy Policy
+                  </Link>
                 </div>
+
                 <p className="mt-5 text-xs tracking-wider text-purple-400">
                   TECHNOLOGY & DIGITAL SOLUTIONS
                 </p>
