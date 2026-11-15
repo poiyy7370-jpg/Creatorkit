@@ -11,8 +11,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...tools.map((tool) => `/tools/${tool.slug}`),
   ];
 
+  const baseUrl = site.url.replace(/\/+$/, "");
+
   return pages.map((page) => ({
-    url: `${site.url}${page}`,
+    url: `${baseUrl}${page ? `/${page.replace(/^\/+/, "")}` : ""}`,
     lastModified: new Date(),
     changeFrequency: "weekly",
     priority: page === "" ? 1 : 0.8,
