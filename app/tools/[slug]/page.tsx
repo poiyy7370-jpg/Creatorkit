@@ -45,11 +45,26 @@ export function generateMetadata({
   const t = tools.find((x) => x.slug === params.slug);
   if (!t) return {};
 
+  const title = t.seoTitle;
+  const description = t.metaDescription;
+  const canonical = `https://creatorkit-three.vercel.app/tools/${t.slug}`;
+
   return {
-    title: t.name,
-    description: t.description,
-    alternates: { canonical: `/tools/${t.slug}` },
-    openGraph: { title: t.name, description: t.description },
+    title,
+    description,
+    alternates: { canonical },
+    openGraph: {
+      title,
+      description,
+      url: canonical,
+      siteName: "CreatorKit",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+    },
   };
 }
 
