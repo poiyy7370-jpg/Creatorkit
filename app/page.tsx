@@ -6,24 +6,18 @@ export default function Home() {
   return (
     <div className="space-y-16">
       <section className="relative isolate overflow-hidden rounded-3xl border border-amber-400/30 bg-gradient-to-br from-slate-950 via-[#100b24] to-purple-950 px-5 py-16 text-center shadow-2xl sm:px-10 sm:py-24">
-
-        {/* Decorative background */}
         <div className="pointer-events-none absolute -left-20 top-10 h-64 w-64 rounded-full bg-purple-600/20 blur-3xl" />
         <div className="pointer-events-none absolute -right-20 bottom-0 h-64 w-64 rounded-full bg-amber-500/20 blur-3xl" />
 
-        {/* Social media decorations */}
         <div className="absolute left-5 top-16 hidden rotate-[-12deg] rounded-2xl border border-white/10 bg-white/10 p-4 text-5xl shadow-xl sm:block">
           ▶️
         </div>
-
         <div className="absolute bottom-28 left-10 hidden rotate-12 rounded-2xl border border-white/10 bg-white/10 p-4 text-5xl shadow-xl sm:block">
           📸
         </div>
-
         <div className="absolute right-5 top-16 hidden rotate-12 rounded-2xl border border-white/10 bg-white/10 p-4 text-5xl shadow-xl sm:block">
           🎵
         </div>
-
         <div className="absolute bottom-28 right-10 hidden rotate-[-10deg] rounded-2xl border border-white/10 bg-white/10 p-4 text-5xl shadow-xl sm:block">
           🎬
         </div>
@@ -42,7 +36,7 @@ export default function Home() {
 
           <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-slate-300 sm:text-xl">
             Free tools for YouTube, Instagram and TikTok.
-            They run in your browser, with no sign-up.
+            Many tools run directly in your browser, with no sign-up required.
           </p>
 
           <div className="mx-auto mt-10 max-w-2xl rounded-2xl border border-amber-400/40 bg-black/40 p-2 shadow-lg shadow-purple-900/30">
@@ -52,9 +46,9 @@ export default function Home() {
           <div className="mx-auto mt-12 grid max-w-4xl grid-cols-2 gap-3 sm:grid-cols-4">
             {[
               ["⚡", "100% Free", "No Sign-Up"],
-              ["🛡️", "Safe & Secure", "Your Privacy First"],
-              ["🚀", "Fast Tools", "Instant Results"],
-              ["❤️", "Made for Creators", "Grow Your Audience"],
+              ["🛡️", "Privacy-Friendly", "Browser Processing"],
+              ["🚀", "Browser-Based", "Simple Workflows"],
+              ["❤️", "Made for Creators", "Creative Tools"],
             ].map(([icon, title, subtitle]) => (
               <div
                 key={title}
@@ -99,6 +93,70 @@ export default function Home() {
           {tools.map((t) => (
             <ToolCard key={t.slug} t={t} />
           ))}
+        </div>
+      </section>
+
+      <section className="rounded-3xl border border-amber-400/20 bg-slate-900 p-7 sm:p-10">
+        <div className="mx-auto max-w-3xl">
+          <p className="text-sm font-bold uppercase tracking-widest text-amber-400">
+            About Our Platform
+          </p>
+          <h2 className="mt-3 text-3xl font-extrabold text-white">
+            Why Choose CreatorKit?
+          </h2>
+
+          <p className="mt-5 leading-8 text-slate-300">
+            CreatorKit is a collection of practical digital tools for
+            content creators, social media marketers and online businesses.
+            Our goal is to make everyday creative tasks easier through
+            simple, accessible browser-based experiences.
+          </p>
+
+          <h3 className="mt-7 text-xl font-bold text-white">
+            Tools for Different Creative Tasks
+          </h3>
+          <p className="mt-3 leading-8 text-slate-300">
+            You can count words and characters, generate social media
+            hashtags and video descriptions, create thumbnails, resize
+            images, compress files and generate QR codes. Video and image
+            tools also provide options for editing and preparing visual
+            content.
+          </p>
+
+          <h3 className="mt-7 text-xl font-bold text-white">
+            Simple Browser-Based Workflows
+          </h3>
+          <p className="mt-3 leading-8 text-slate-300">
+            Select a tool, provide the required text or file, adjust the
+            available settings and generate your result. Many file tools
+            process content locally in your browser. Processing time
+            depends on the file size and your device.
+          </p>
+
+          <h3 className="mt-7 text-xl font-bold text-white">
+            Free and Accessible
+          </h3>
+          <p className="mt-3 leading-8 text-slate-300">
+            CreatorKit aims to make useful digital features accessible
+            without requiring users to create an account. We continue
+            improving the platform to make its tools easier to understand
+            and use.
+          </p>
+
+          <div className="mt-8 flex flex-wrap gap-4">
+            <a
+              href="/about"
+              className="font-semibold text-amber-400 hover:text-amber-300"
+            >
+              Learn More About Us →
+            </a>
+            <a
+              href="/contact"
+              className="font-semibold text-amber-400 hover:text-amber-300"
+            >
+              Contact CreatorKit →
+            </a>
+          </div>
         </div>
       </section>
     </div>
