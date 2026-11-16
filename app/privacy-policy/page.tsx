@@ -114,8 +114,7 @@ export default function PrivacyPolicyPage() {
           <h2 className="mb-4 text-2xl font-bold text-white">Contact</h2>
           <p className="leading-8 text-slate-300">
             CreatorKit is a product by MZ Digital Marketing.
-            Official contact details will be published on our
-            Contact Us page when available.
+           For privacy-related questions, contact us at creatorkit.support@gmail.com.
           </p>
           <Link href="/contact" className="mt-4 inline-block text-amber-400 hover:underline">
             Visit Contact Us
