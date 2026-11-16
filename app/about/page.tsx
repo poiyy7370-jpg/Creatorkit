@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Learn about CreatorKit, a digital tools platform by MZ Digital Marketing.",
+    "Learn about CreatorKit, a digital tools platform by MZ Digital Marketing, offering practical tools for creators and marketers.",
 };
 
 export default function AboutPage() {
@@ -49,6 +49,28 @@ export default function AboutPage() {
             <li>• Video-to-shorts conversion tools</li>
             <li>• Helpful tools for content creators and marketers</li>
           </ul>
+        </section>
+
+        <section className="mb-10 rounded-2xl border border-amber-400/20 bg-slate-900 p-7">
+          <h2 className="mb-4 text-2xl font-bold text-white">
+            How CreatorKit Works
+          </h2>
+          <p className="mb-4 leading-8 text-slate-300">
+            CreatorKit offers browser-based tools designed to simplify
+            common creative and digital tasks. Users can select a tool,
+            upload or enter the required content, adjust available
+            settings and generate results directly through the website.
+          </p>
+          <p className="mb-4 leading-8 text-slate-300">
+            Many of our tools process files locally in the browser,
+            helping users work without creating an account or uploading
+            files to our servers. Some features may rely on third-party
+            technologies to provide their functionality.
+          </p>
+          <p className="leading-8 text-slate-300">
+            We continuously work to improve our tools, usability and
+            website experience based on user needs and feedback.
+          </p>
         </section>
 
         <section className="mb-10 rounded-2xl border border-amber-400/20 bg-slate-900 p-7">
